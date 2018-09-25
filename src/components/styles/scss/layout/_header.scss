@@ -52,109 +52,67 @@
   }
 }
 
-#code-messsage p {
-  border-right: 3px solid orange;
-  white-space: nowrap;
-  overflow: hidden;
-}
+#code-messsage {
+  p {
+    border-right: 3px solid orange;
+    white-space: nowrap;
+    overflow: hidden;
 
-#code-messsage p:nth-child(1) {
-  width: 242px;
-  animation: type 3s steps(40, end);
-  animation-fill-mode: forwards;
-}
+    &:nth-child(1) {
+      width: 242px;
+      animation: type 3s steps(40, end);
+      animation-fill-mode: forwards;
+    }
 
-#code-messsage p:nth-child(2) {
-  width: 133px;
-  opacity: 0;
-  animation: type2 2s steps(40, end);
-  animation-delay: 3s;
-  animation-fill-mode: forwards;
-}
+    &:nth-child(2) {
+      width: 133px;
+      opacity: 0;
+      animation: type2 2s steps(40, end);
+      animation-delay: 3s;
+      animation-fill-mode: forwards;
+    }
 
-#code-messsage p:nth-child(3) {
-  width: 219px;
-  opacity: 0;
-  animation: type2 2.5s steps(40, end);
-  animation-delay: 5s;
-  animation-fill-mode: forwards;
-}
+    &:nth-child(3) {
+      width: 219px;
+      opacity: 0;
+      animation: type2 2.5s steps(40, end);
+      animation-delay: 5s;
+      animation-fill-mode: forwards;
+    }
 
-#code-messsage p:nth-child(4) {
-  width: 227px;
-  opacity: 0;
-  animation: type2 2.5s steps(40, end);
-  animation-delay: 7.5s;
-  animation-fill-mode: forwards;
-}
+    &:nth-child(4) {
+      width: 227px;
+      opacity: 0;
+      animation: type2 2.5s steps(40, end);
+      animation-delay: 7.5s;
+      animation-fill-mode: forwards;
+    }
 
-#code-messsage p:nth-child(5) {
-  width: 273px;
-  opacity: 0;
-  animation: type2 2s steps(40, end);
-  animation-delay: 10s;
-  animation-fill-mode: forwards;
-}
-#code-messsage p:nth-child(6) {
-  width: 218px;
-  opacity: 0;
-  animation: type2 2s steps(40, end);
-  animation-delay: 12s;
-  animation-fill-mode: forwards;
-}
+    &:nth-child(5) {
+      width: 273px;
+      opacity: 0;
+      animation: type2 2s steps(40, end);
+      animation-delay: 10s;
+      animation-fill-mode: forwards;
+    }
+    &:nth-child(6) {
+      width: 218px;
+      opacity: 0;
+      animation: type2 2s steps(40, end);
+      animation-delay: 12s;
+      animation-fill-mode: forwards;
+    }
 
-#code-messsage p:nth-child(7) {
-  width: 20px;
-  opacity: 0;
-  animation: type-end-blink 0.25s steps(20, end), blink 0.5s step-end infinite alternate;
-  animation-delay: 14s;
-  animation-fill-mode: forwards;
-}
-
-
-
-@keyframes type {
-  0% {
-    width: 0;
-  }
-  99.9% {
-    border-right: 0.15em solid orange;
-  }
-  100% {
-    border: none;
+    &:nth-child(7) {
+      width: 20px;
+      opacity: 0;
+      animation: type-end-blink 0.25s steps(20, end),
+        blink 0.5s step-end infinite alternate;
+      animation-delay: 14s;
+      animation-fill-mode: forwards;
+    }
   }
 }
-
-@keyframes type2 {
-  0% {
-    width: 0;
-  }
-  1% {
-    opacity: 1;
-  }
-  99.9% {
-    border-right: 0.15em solid orange;
-  }
-  100% {
-    opacity: 1;
-    border: none;
-  }
-}
-
-@keyframes type-end-blink {
-  0% {
-    width: 0;
-  }
-  1% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-
-
 
 
 ////////
