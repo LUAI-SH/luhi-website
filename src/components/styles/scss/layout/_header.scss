@@ -1,52 +1,227 @@
 .header {
-  height: 85vh;
+  height: 100vh;
+  width: 100%;
   background-image: linear-gradient(
       to right bottom,
-      rgba($color-primary-light, 0.8),
-      rgba($color-primary-dark, 0.8)
+      rgba(4, 126, 197, 0.4),
+      rgba(2, 74, 116, 0.4)
     ),
-    url(../img/hero-small.jpg);
+    url("bg-images/background.jpg");
+  background-repeat: no-repeat;
   background-size: cover;
-  background-position: top;
-  position: relative;
+  background-position: 50%;
 
-  @supports (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0 0)) {
-    -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
-    clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
-    height: 95vh;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+
+  &__photo {
+    flex-grow: 3;
+    img {
+      width: 25rem;
+      margin-top: 10rem;
+      border: 0.5rem solid #fff;
+      border-radius: 50%;
+      opacity: 1 !important;
+      animation: popup 1.5s ease-out forwards;
+    }
   }
 
-  @media only screen and (min-resolution: 192dpi) and (min-width: 37.5em),
-    only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5em),
-    only screen and (min-width: 125em) {
-    background-image: linear-gradient(
-        to right bottom,
-        rgba($color-primary-light, 0.8),
-        rgba($color-primary-dark, 0.8)
-      ),
-      url(../img/hero.jpg);
+  &__code-message {
+    flex-grow: 2;
+    width: 100%;
+    padding-left: 1.5rem;
+    font-family: Menlo Regular;
+    color: $color-white;
+    font-size: 15px;
+    line-height: 1.6;
+    opacity: 1 !important;
   }
 
-  @include respond(phone) {
-    -webkit-clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
-    clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
-  }
-
-  &__logo-box {
-    position: absolute;
-    top: 4rem;
-    left: 4rem;
-  }
-
-  &__logo {
-    height: 3.5rem;
-  }
-
-  &__text-box {
-    position: absolute;
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
+  &__arrow {
+    flex-grow: 0;
+    height: 4rem;
+    .btn-arrow {
+      &__icon {
+        width: 5rem;
+        height: 5rem;
+        fill: #fff;
+        animation: move-up-down 1.5s ease-in-out infinite;
+      }
+    }
   }
 }
+
+#code-messsage p {
+  border-right: 3px solid orange;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+#code-messsage p:nth-child(1) {
+  width: 242px;
+  animation: type 3s steps(40, end);
+  animation-fill-mode: forwards;
+}
+
+#code-messsage p:nth-child(2) {
+  width: 133px;
+  opacity: 0;
+  animation: type2 2s steps(40, end);
+  animation-delay: 3s;
+  animation-fill-mode: forwards;
+}
+
+#code-messsage p:nth-child(3) {
+  width: 219px;
+  opacity: 0;
+  animation: type2 2.5s steps(40, end);
+  animation-delay: 5s;
+  animation-fill-mode: forwards;
+}
+
+#code-messsage p:nth-child(4) {
+  width: 227px;
+  opacity: 0;
+  animation: type2 2.5s steps(40, end);
+  animation-delay: 7.5s;
+  animation-fill-mode: forwards;
+}
+
+#code-messsage p:nth-child(5) {
+  width: 273px;
+  opacity: 0;
+  animation: type2 2s steps(40, end);
+  animation-delay: 10s;
+  animation-fill-mode: forwards;
+}
+#code-messsage p:nth-child(6) {
+  width: 218px;
+  opacity: 0;
+  animation: type2 2s steps(40, end);
+  animation-delay: 12s;
+  animation-fill-mode: forwards;
+}
+
+#code-messsage p:nth-child(7) {
+  width: 20px;
+  opacity: 0;
+  animation: type-end-blink 0.25s steps(20, end), blink 0.5s step-end infinite alternate;
+  animation-delay: 14s;
+  animation-fill-mode: forwards;
+}
+
+
+
+@keyframes type {
+  0% {
+    width: 0;
+  }
+  99.9% {
+    border-right: 0.15em solid orange;
+  }
+  100% {
+    border: none;
+  }
+}
+
+@keyframes type2 {
+  0% {
+    width: 0;
+  }
+  1% {
+    opacity: 1;
+  }
+  99.9% {
+    border-right: 0.15em solid orange;
+  }
+  100% {
+    opacity: 1;
+    border: none;
+  }
+}
+
+@keyframes type-end-blink {
+  0% {
+    width: 0;
+  }
+  1% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+
+
+
+
+////////
+
+// .typewriter1 {
+//   border-right: 0.15em solid rgb(255, 208, 0);
+//   white-space: nowrap; /* Keeps the content on a single line */
+//   overflow: hidden; /* Ensures the content is not revealed until the animation */
+//   // animation-name: typing;
+//   // animation-duration:  3.5s;
+//   // animation-timing-function: steps(50, end); //ease-in;
+//   // animation-iteration-count: 8;
+//   // animation-delay: 1s;
+//   // animation-fill-mode: forwards;
+//   animation: typing 3.5s steps(50, end) 1 0.5s both,
+//     blink-caret 0.7s step-start 6 0.2s forwards;
+// }
+
+// .header {
+//   height: 85vh;
+//   background-image: linear-gradient(
+//       to right bottom,
+//       rgba($color-primary-light, 0.8),
+//       rgba($color-primary-dark, 0.8)
+//     ),
+//     url(../img/hero-small.jpg);
+//   background-size: cover;
+//   background-position: top;
+//   position: relative;
+
+//   @supports (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0 0)) {
+//     -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+//     clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+//     height: 95vh;
+//   }
+
+//   @media only screen and (min-resolution: 192dpi) and (min-width: 37.5em),
+//     only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5em),
+//     only screen and (min-width: 125em) {
+//     background-image: linear-gradient(
+//         to right bottom,
+//         rgba($color-primary-light, 0.8),
+//         rgba($color-primary-dark, 0.8)
+//       ),
+//       url(../img/hero.jpg);
+//   }
+
+//   @include respond(phone) {
+//     -webkit-clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+//     clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+//   }
+
+//   &__logo-box {
+//     position: absolute;
+//     top: 4rem;
+//     left: 4rem;
+//   }
+
+//   &__logo {
+//     height: 3.5rem;
+//   }
+
+//   &__text-box {
+//     position: absolute;
+//     top: 40%;
+//     left: 50%;
+//     transform: translate(-50%, -50%);
+//     text-align: center;
+//   }
+// }

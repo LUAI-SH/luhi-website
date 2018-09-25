@@ -24,12 +24,6 @@ $color-black: #000;
 $default-font-size: 1.6rem;
 
 
-// GRID
-$grid-width: 114rem;
-$gutter-vertical: 8rem;
-$gutter-vertical-small: 6rem;
-$gutter-horizontal: 6rem;
-
 $luGreen: #05998d;
 $luGreenDark: #017c73;
 $luGreyLight: #fafafa;
@@ -37,7 +31,7 @@ $luGrey: #c0c0c0;
 $luGreyDark: #212733;
 
 /* Coding Colors */
-$luCodeBlue: #5ccfe6;
-$luCodeRed: #f28779;
-$luCodeGreen: #bae67e;
-$luCodeBrown: #ffa759;
+$color-code-blue: #5ccfe6;
+$color-code-red: #f28779;
+$color-code-green: #bae67e;
+$color-code-brown: #ffa759;

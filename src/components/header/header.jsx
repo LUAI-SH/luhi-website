@@ -32,57 +32,57 @@ class Header extends Component {
       isArrowAnimationStarted
     } = this.state;
     return (
-      <div className="lu-header-container clearfix">
-        <div className="image-bg">
-          <div className="lu-header-bg">
-            <img src={photo} alt="Luai" />
-            {isCodeMessageAnimationStarted && (
-              <div className="container" id="code-messsage">
-                <p>
-                  <span className="luCodeBlue">console</span>
-                  <span className="luCodeBrown">.</span>
-                  <span className="luCodeRed">log</span>
-                  <span>(</span>
-                  <span className="luCodeGreen">'Hello There'</span>
-                  <span>);</span>
-                </p>
-
-                <p className="no-margin">
-                  <span className="luCodeBrown">let</span> messege
-                  <span className="luCodeBrown"> = </span>
-                  <span className="luCodeGreen">
-                    `<br />
-                  </span>
-                </p>
-                <p className="no-margin">
-                  <span className="luCodeGreen">My name is Luai. I’m a</span>
-                </p>
-                <p className="no-margin">
-                  <span className="luCodeGreen">Computer Engineer and a</span>
-                </p>
-                <p className="no-margin">
-                  <span className="luCodeGreen">
-                    Web Developer. Please scroll
-                  </span>
-                </p>
-                <p className="no-margin">
-                  <span className="luCodeGreen">to find more about me.</span>
-                </p>
-                <p>
-                  <span className="luCodeGreen">`</span>
-                </p>
-              </div>
-            )}
-            {isArrowAnimationStarted && (
-              <div className="arrow-icon">
-                <button onClick={this.handleScrollToSkills}>
-                  <img src={arrow} alt="arrow" />
-                </button>
-              </div>
-            )}
-          </div>
+      <header className="header">
+        <div className="header__photo">
+          <img src={photo} alt="Luai" />
         </div>
-      </div>
+        {isCodeMessageAnimationStarted && (
+          <div id="code-messsage" className="header__code-message">
+            <p>
+              <span className="color-code-blue">console</span>
+              <span className="color-code-brown">.</span>
+              <span className="color-code-red">log</span>
+              <span>(</span>
+              <span className="color-code-green">'Hello There'</span>
+              <span>);</span>
+            </p>
+
+            <p>
+              <span className="color-code-brown">let</span> messege
+              <span className="color-code-brown"> = </span>
+              <span className="color-code-green">
+                `<br />
+              </span>
+            </p>
+            <p>
+              <span className="color-code-green u-padding-left-md">My name is Luai. I’m a</span>
+            </p>
+            <p>
+              <span className="color-code-green u-padding-left-md">Computer Engineer and a</span>
+            </p>
+            <p>
+              <span className="color-code-green u-padding-left-md">
+                Web Developer. Please scroll
+              </span>
+            </p>
+            <p>
+              <span className="color-code-green u-padding-left-md">to find more about me.</span>
+            </p>
+            <p>
+              <span className="color-code-green">`</span>
+            </p>
+          </div>
+        )}
+        <div className="header__arrow">
+          {isArrowAnimationStarted && (
+            <a className="btn-arrow" onClick={this.handleScrollToSkills}>
+              <svg className="btn-arrow__icon">
+                <use xlinkHref={`${arrow}#Capa_1`} />
+              </svg>
+            </a>
+          )}
+        </div>
+      </header>
     );
   }
 }
