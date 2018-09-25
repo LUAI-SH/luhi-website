@@ -1,0 +1,44 @@
+
+#my-education {
+    margin-bottom: 0.1rem;
+}
+
+.lu-education-bg {
+  @include colored-rectangle(100%, 22rem, rgb(5, 54, 93));
+  overflow: hidden;
+}
+
+#my-education h1 {
+  text-align: left;
+  font-size: 2.5rem;
+  margin-top: 0.5rem;
+  color: white;
+}
+
+#my-education h1 span {
+    color: rgb(246, 211, 113);
+}
+
+.edu-thin-line {
+    @include colored-rectangle(14.5rem, 0.1rem, $luGrey);
+}
+
+.edu-details {
+    margin: 1rem auto;
+    color: rgb(202, 232, 255);
+    font-size: 0.80rem;
+    text-align: left;
+}
+
+#my-education div.col-4 {
+    padding-left: 0.1rem;
+}
+
+#my-education div.col-8 {
+    padding-left: 0rem;
+    padding-right: 0.4rem;
+}
+
+#my-education div.row {
+    margin-bottom: 1.5rem;
+}

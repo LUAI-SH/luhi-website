@@ -1,0 +1,86 @@
+
+i {
+  font-style: normal;
+  font-size: 1.2rem;
+  color: $luGreyDark;
+}
+
+.progress-bg {
+  position: relative;
+  background-color: $luGrey;
+  width: 100%;
+  height: 0.3rem;
+  z-index: 10;
+  border-radius: 5rem;
+  top: 0.2rem;
+}
+
+.progress {
+  position: relative;
+  background-image: -moz-linear-gradient(
+    -3deg,
+    rgb(38, 162, 149) 0%,
+    rgb(46, 194, 178) 100%
+  );
+  background-image: -webkit-linear-gradient(
+    -3deg,
+    rgb(38, 162, 149) 0%,
+    rgb(46, 194, 178) 100%
+  );
+  background-image: -ms-linear-gradient(
+    -3deg,
+    rgb(38, 162, 149) 0%,
+    rgb(46, 194, 178) 100%
+  );
+  width: 18rem;
+  height: 0.3rem;
+  z-index: 45;
+}
+
+@mixin slide-in-percentage($from, $to) {
+    from {
+      width: $from;
+    }
+    to {
+      width: $to;
+    }
+}
+// 80%
+@include mykeyframe("slide-in-80") {
+  @include slide-in-percentage(0%, 80%);
+}
+@include slide-in-percentage(0%, 80%);
+
+//85
+@include mykeyframe("slide-in-85") {
+  @include slide-in-percentage(0%, 85%);
+}
+@include slide-in-percentage(0%, 85%);
+
+//90
+@include mykeyframe("slide-in-90") {
+  @include slide-in-percentage(0%, 90%);
+}
+@include slide-in-percentage(0%, 90%);
+//95
+@include mykeyframe("slide-in-95") {
+  @include slide-in-percentage(0%, 95%);
+}
+@include slide-in-percentage(0%, 95%);
+
+
+
+
+.progress-80 {
+  animation: slide-in-80 0.8s ease-in forwards;
+}
+.progress-85 {
+  animation: slide-in-85 0.8s ease-in forwards;
+}
+.progress-90 {
+  animation: slide-in-90 0.8s ease-in forwards;
+}
+
+.progress-95 {
+  animation: slide-in-95 0.8s ease-in forwards;
+}
