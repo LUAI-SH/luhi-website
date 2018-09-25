@@ -1,11 +1,9 @@
-import React from 'react';
+import React from "react";
 
 const Beta = () => {
   return (
-    <div id="beta">
-      <div className='beta-style'>
-          <p>&beta;</p>
-      </div>
+    <div className="beta-warning">
+      <p className="beta-warning__symbol">&beta;</p>
     </div>
   );
 };

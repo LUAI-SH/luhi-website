@@ -11,7 +11,7 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      isLoading: true,
+      isLoading: false,
       isGreetingAppeared: false
     };
   }
@@ -60,7 +60,7 @@ class App extends Component {
         <NavBar />
         <Header />
         <Beta />
-        <Skills />
+        {/* <Skills /> */}
         <Education />
         <Footer />
       </div>

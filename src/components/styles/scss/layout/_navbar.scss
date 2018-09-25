@@ -14,7 +14,11 @@
 
   &__logo:link,
   &__logo:visited {
-    transition: all 0.3s;
+    line-height: 1;
+    // transition: all 0.3s;
+  }
+  &__logo:hover {
+    cursor: pointer;
   }
   &__icon {
     width: 4.5rem;
@@ -26,20 +30,33 @@
 
   &__items {
     margin-right: 1rem;
-    width: 13rem;
+    font-size: 1.5rem;
+    width: 12rem;
     display: flex;
     flex-wrap: nowrap;
     justify-content: space-between;
     align-items: center;
-    color: #87b3cd;
-  }
-  &__item:link,
-  &__item:visited {
-    background-image: linear-gradient(120deg,transparent,transparent 50%,#87b3cd 0);
-    background-size: 265%;
-    transition: all .4s;
-    animation: slide-to-right .5s ease-in-out 1 .5s;
+    color: hsl(202, 41%, 67%);
+    animation: slide-to-right 0.5s ease-in-out 1;
+    animation-delay: 0.5s;
     animation-fill-mode: backwards;
   }
-}
 
+  &__item:link,
+  &__item:visited {
+    display: inline-block;
+    background-image: linear-gradient(
+      120deg,
+      transparent,
+      transparent 50%,
+      #87b3cd 0
+    );
+    background-size: 265%;
+    // transition: all 0.4s;
+  }
+  &__item:hover {
+    cursor: pointer;
+    background-position: 163%;
+    color: $color-white;
+  }
+}

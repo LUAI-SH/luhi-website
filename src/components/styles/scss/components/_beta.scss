@@ -1,0 +1,19 @@
+
+.beta-warning {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  z-index: 100000;
+  margin: 0.3rem 0.3rem;
+  width: 4rem;
+  height: 4rem;
+  background-color: rgb(223, 41, 41);
+  border-radius: 50%;
+
+  &__symbol {
+    color: $color-white;
+    font-size: 2rem;
+    padding-top: 0.1rem;
+    margin: 0 auto;
+  }
+}
