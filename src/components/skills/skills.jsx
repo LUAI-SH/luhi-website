@@ -94,7 +94,7 @@ class Skills extends Component {
     ];
 
     return (
-      <section id="my-skills" className="section-skills my-skills">
+      <section id="section-skills" className="my-skills">
         <ScrollAnimation
           offset={30}
           duration={0.5}
@@ -106,7 +106,7 @@ class Skills extends Component {
               my
               <span>Skills</span>
             </h2>
-            <div className="u-bottom-thin-line" />
+            <div className="u-thin-line" />
           </div>
         </ScrollAnimation>
         <div className="my-skills__languages">

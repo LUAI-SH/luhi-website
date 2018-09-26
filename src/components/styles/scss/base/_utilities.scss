@@ -32,10 +32,9 @@
   padding-left: 20px !important;
 }
 
-.u-bottom-thin-line {
-  @include colored-rectangle($width: 98%, $height: 1px, $bg-color: black);
+.u-thin-line {
+  @include colored-rectangle($width: 98%, $height: 1px, $bg-color: $color-grey-dark-3);
   margin: 0 auto;
-  padding: 0;
 }
 
 .color-code-blue {

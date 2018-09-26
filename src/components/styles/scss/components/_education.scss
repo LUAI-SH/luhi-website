@@ -1,44 +1,58 @@
+.education-history {
+  &__title {
+    color: $color-white;
+    margin-bottom: 0.5rem;
+  }
+  &__details {
+    width: 100%;
+    height: 100%;
+    font-size: 1.6rem;
+    line-height: 1.5;
+    display: grid;
+    padding: 0 1.5rem 1.5rem 1.5rem;
+    grid-template-areas:
+      "year-1 description-1"
+      "year-2 description-2"
+      "year-3 description-3";
+    grid-row-gap: 1.5rem;
+    grid-column-gap: 4rem;
 
-#my-education {
-    margin-bottom: 0.1rem;
-}
-
-.lu-education-bg {
-  @include colored-rectangle(100%, 22rem, rgb(5, 54, 93));
-  overflow: hidden;
-}
-
-#my-education h1 {
-  text-align: left;
-  font-size: 2.5rem;
-  margin-top: 0.5rem;
-  color: white;
+    .details {
+      &__year {
+        text-align: right;
+        .y-1 {
+          grid-area: year-1;
+        }
+        .y-2 {
+          grid-area: year-2;
+        }
+        .y-3 {
+          grid-area: year-3;
+        }
+      }
+      &__description {
+        text-align: justify;
+        .d-1 {
+          grid-area: description-1;
+        }
+        .d-2 {
+          grid-area: description-2;
+        }
+        .d-3 {
+          grid-area: description-3;
+        }
+      }
+    }
+  }
 }
 
 #my-education h1 span {
-    color: rgb(246, 211, 113);
-}
-
-.edu-thin-line {
-    @include colored-rectangle(14.5rem, 0.1rem, $luGrey);
+  color: rgb(246, 211, 113);
 }
 
 .edu-details {
-    margin: 1rem auto;
-    color: rgb(202, 232, 255);
-    font-size: 0.80rem;
-    text-align: left;
-}
-
-#my-education div.col-4 {
-    padding-left: 0.1rem;
-}
-
-#my-education div.col-8 {
-    padding-left: 0rem;
-    padding-right: 0.4rem;
-}
-
-#my-education div.row {
-    margin-bottom: 1.5rem;
+  margin: 1rem auto;
+  color: rgb(202, 232, 255);
+  font-size: 0.8rem;
+  text-align: left;
 }
