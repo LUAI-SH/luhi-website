@@ -1,0 +1,163 @@
+.my-skills {
+  &__title {
+    padding-left: 1rem;
+    margin-bottom: 2rem;
+    border-bottom: 2px solid #626262;
+  }
+
+  &__languages {
+    margin-bottom: 3rem;
+
+    .languages {
+      &__title {
+        margin: 0 auto;
+      }
+      &__details {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        height: 25rem;
+        padding: 0 1rem;
+      }
+    }
+  }
+
+  &__libraries {
+    margin-bottom: 2rem;
+
+    .libraries {
+      &__title {
+        h3 {
+          width: 100%;
+          background-color: #ab2b2b;
+        }
+      }
+      &__details {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+
+        .grid-item {
+          padding: 2rem;
+          margin-bottom: 0.5rem;
+          &__icon {
+            height: 6rem;
+          }
+          &__caption {
+            margin-top: 1rem;
+            font-size: 1.8rem;
+          }
+        }
+      }
+    }
+  }
+
+  &__database {
+    margin-bottom: 2rem;
+
+    .database {
+      &__title {
+        h3 {
+          width: 100%;
+          background-color: #055399;
+        }
+      }
+      &__details {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+
+        .grid-item {
+          padding: 2rem;
+          margin-bottom: 0.5rem;
+          &__icon {
+            height: 6rem;
+          }
+          &__caption {
+            margin-top: 1rem;
+            font-size: 1.8rem;
+          }
+        }
+      }
+    }
+  }
+
+  &__design-apps {
+    margin-bottom: 2rem;
+
+    .design-apps {
+      &__title {
+        h3 {
+          width: 100%;
+          background-color: #990571;
+        }
+      }
+      &__details {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+
+        .grid-item {
+          padding: 2rem;
+          margin-bottom: 0.5rem;
+          &__icon {
+            height: 6rem;
+          }
+          &__caption {
+            margin-top: 1rem;
+            font-size: 1.8rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+.lu-slide-to-right-in {
+  animation-name: lu-slide-to-right-in;
+}
+
+@keyframes lu-slide-to-right-in {
+  0% {
+    transform: translateX(-20rem);
+  }
+  100% {
+    transform: translateX(0rem);
+  }
+}
+
+.lu-slide-to-left-in {
+  animation-name: lu-slide-to-left-in;
+}
+
+@keyframes lu-slide-to-left-in {
+  0% {
+    transform: translateX(20rem);
+  }
+  100% {
+    transform: translateX(0rem);
+  }
+}
+
+.lu-slide-to-right-out {
+  animation-name: lu-slide-to-right-out;
+}
+
+@keyframes lu-slide-to-right-out {
+  0% {
+    transform: translateX(0rem);
+  }
+  100% {
+    transform: translateX(-20rem);
+  }
+}
+
+.lu-slide-to-left-out {
+  animation-name: lu-slide-to-left-out;
+}
+
+@keyframes lu-slide-to-left-out {
+  0% {
+    transform: translateX(0rem);
+  }
+  100% {
+    transform: translateX(20rem);
+  }
+}

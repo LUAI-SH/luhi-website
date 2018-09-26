@@ -10,7 +10,7 @@ class ProgressBarOnScroll extends Component {
     const { title, animateInType, animateOutType, percentage } = this.props;
     const { isProgressBarAppeared } = this.state;
     return (
-      <React.Fragment>
+      <div className="progressbar">
         <ScrollAnimation
           animateIn={animateInType}
           duration={0.5}
@@ -23,12 +23,15 @@ class ProgressBarOnScroll extends Component {
             this.setState({ isProgressBarAppeared: false });
           }}
         >
-          <i>{title}</i>
-          <div className="progress-bg">
-            {isProgressBarAppeared && <div className={`progress progress-${percentage}`} />}
+          <i className="progressbar__title">{title}</i>
+          <div className="progressbar__load-line">
+            <div className="load-line__back" />
+            {isProgressBarAppeared && (
+              <div className={`load-line__front to-${percentage}`} />
+            )}
           </div>
         </ScrollAnimation>
-      </React.Fragment>
+      </div>
     );
   }
 }

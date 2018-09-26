@@ -1,18 +1,17 @@
 @mixin clearfix {
-    &::after {
-        content: "";
-        display: table;
-        clear: both;
-    }
+  &::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
 }
 
 @mixin absCenter {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
-
 
 // MEDIA QUERY MANAGER
 /*
@@ -33,18 +32,26 @@ ORDER: Base + typography > general layout + grid > page layout > components
 1em = 16px
 */
 @mixin respond($breakpoint) {
-    @if $breakpoint == phone {
-        @media only screen and (max-width: 37.5em) { @content };    //600px
-    }
-    @if $breakpoint == tab-port {
-        @media only screen and (max-width: 56.25em) { @content };     //900px
-    }
-    @if $breakpoint == tab-land {
-        @media only screen and (max-width: 75em) { @content };    //1200px
-    }
-    @if $breakpoint == big-desktop {
-        @media only screen and (min-width: 112.5em) { @content };    //1800
-    }
+  @if $breakpoint == phone {
+    @media only screen and (max-width: 37.5em) {
+      @content;
+    } //600px
+  }
+  @if $breakpoint == tab-port {
+    @media only screen and (max-width: 56.25em) {
+      @content;
+    } //900px
+  }
+  @if $breakpoint == tab-land {
+    @media only screen and (max-width: 75em) {
+      @content;
+    } //1200px
+  }
+  @if $breakpoint == big-desktop {
+    @media only screen and (min-width: 112.5em) {
+      @content;
+    } //1800
+  }
 }
 
 @mixin colored-rectangle($width: 100px, $height: 100px, $bg-color: black) {
@@ -55,23 +62,8 @@ ORDER: Base + typography > general layout + grid > page layout > components
   background-color: $bg-color;
 }
 
-@mixin remove-padding($class) {
-  @extend .#{$class};
-  padding: 0;
-}
-
 @mixin scale-font-size-by($font-size, $factor) {
   font-size: $factor * $factor;
-}
-
-@mixin add-padding($top: 0, $right: 0, $bottom: 0, $left: 0) {
-  padding: $top $right $bottom $left;
-}
-
-@mixin mykeyframe($animation_name) {
-  @keyframes #{$animation_name} {
-    @content;
-  }
 }
 
 @mixin font($font-family, $font-file) {
@@ -129,96 +121,21 @@ ORDER: Base + typography > general layout + grid > page layout > components
   }
 }
 
-@mixin colored-rectangle($width: 100px, $height: 100px, $bg-color: black) {
-  display: block;
-  position: relative;
-  width: $width;
-  height: $height;
-  background-color: $bg-color;
-}
-
-@mixin remove-padding($class) {
-  @extend .#{$class};
-  padding: 0;
-}
-
 @mixin scale-font-size-by($font-size, $factor) {
   font-size: $factor * $factor;
 }
 
-@mixin add-padding($top: 0, $right: 0, $bottom: 0, $left: 0) {
-  padding: $top $right $bottom $left;
-}
-
-@mixin mykeyframe($animation_name) {
-  @-webkit-keyframes #{$animation_name} {
-    @content;
-  }
-
-  @-moz-keyframes #{$animation_name} {
-    @content;
-  }
-
-  @-o-keyframes #{$animation_name} {
-    @content;
-  }
-
+@mixin my-key-frame($animation_name) {
   @keyframes #{$animation_name} {
     @content;
   }
 }
 
-@mixin font($font-family, $font-file) {
-  @font-face {
-    font-family: $font-family;
-    src: url($font-file+".eot");
-    src: url($font-file+".eot?#iefix") format("embedded-opentype"),
-      url($font-file+".woff") format("woff"),
-      url($font-file+".ttf") format("truetype"),
-      url($font-file+".svg#aller") format("svg");
-    font-weight: normal;
-    font-style: normal;
+@mixin grow-width($to, $from: 0%) {
+  from {
+    width: $from;
   }
-}
-
-/* -------- Screens Break Points -------- */
-@mixin for-phone-only {
-  @media (max-width: 599px) {
-    @content;
-  }
-}
-@mixin for-tablet-portrait-up {
-  @media (min-width: 600px) {
-    @content;
-  }
-}
-@mixin for-tablet-portait-only {
-  @media (min-width: 600px) and (max-width: 899px) {
-    @content;
-  }
-}
-@mixin for-tablet-landscape-up {
-  @media (min-width: 900px) {
-    @content;
-  }
-}
-@mixin for-tablet-landscape-only {
-  @media (min-width: 900px) and (max-width: 1199px) {
-    @content;
-  }
-}
-@mixin for-desktop-up {
-  @media (min-width: 1200px) {
-    @content;
-  }
-}
-@mixin for-desktop-only {
-  @media (min-width: 1200px) and (max-width: 1799px) {
-    @content;
-  }
-}
-@mixin for-big-desktop-up {
-  @media (min-width: 1800px) {
-    @content;
+  to {
+    width: 0% + $to;
   }
 }

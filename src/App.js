@@ -60,7 +60,7 @@ class App extends Component {
         <NavBar />
         <Header />
         <Beta />
-        {/* <Skills /> */}
+        <Skills />
         <Education />
         <Footer />
       </div>

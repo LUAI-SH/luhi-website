@@ -1,0 +1,46 @@
+.progressbar {
+  text-align: left;
+  position: relative;
+
+  &__title {
+    font-style: normal;
+    font-size: 2rem;
+    color: $color-black;
+  }
+
+  &__load-line {
+    .load-line {
+      &__back {
+        position: absolute;
+        background-color: rgba(98, 98, 98, 0.5);
+        width: 100%;
+        border-radius: 10rem;
+        height: 5px;
+        z-index: 10;
+      }
+      &__front {
+        position: absolute;
+        height: 5px;
+        border-radius: 10rem;
+        width: 18rem;
+        z-index: 100;
+        background-image: linear-gradient(90deg, #22c1c3, #fd2d5a);
+      }
+    }
+  }
+}
+
+@for $i from 80 through 100 {
+  @include my-key-frame("grow-width-#{$i}") {
+    @include grow-width($i);
+  }
+}
+
+@for $i from 80 through 100 {
+  .to-#{$i} {
+    animation: grow-width-#{$i}
+      0.8s
+      cubic-bezier(0.88, 0.37, 0.26, 0.75)
+      forwards;
+  }
+}
