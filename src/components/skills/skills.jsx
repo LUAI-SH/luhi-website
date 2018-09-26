@@ -96,7 +96,7 @@ class Skills extends Component {
     return (
       <section id="my-skills" className="section-skills my-skills">
         <ScrollAnimation
-          offset={50}
+          offset={30}
           duration={0.5}
           animateIn="bounceInLeft"
           animateOut="fadeOut"
@@ -106,21 +106,21 @@ class Skills extends Component {
               my
               <span>Skills</span>
             </h2>
-            <div className="thin-line" />
+            <div className="u-bottom-thin-line" />
           </div>
         </ScrollAnimation>
         <div className="my-skills__languages">
-          <ScrollAnimation
-            offset={50}
-            duration={0.75}
-            delay={0.5}
-            animateIn="pulse"
-            animateOut="fadeOut"
-          >
-            <div className="languages__title">
+          <div className="languages__title">
+            <ScrollAnimation
+              offset={30}
+              duration={0.75}
+              delay={0.5}
+              animateIn="pulse"
+              animateOut="fadeOut"
+            >
               <h3 className="header-3">Programming Languages</h3>
-            </div>
-          </ScrollAnimation>
+            </ScrollAnimation>
+          </div>
           <div className="languages__details">
             <ProgressBarOnScroll
               title={"HTML5 & CSS3"}
@@ -151,17 +151,17 @@ class Skills extends Component {
           </div>
         </div>
         <div className="my-skills__libraries">
-          <ScrollAnimation
-            offset={50}
-            duration={0.75}
-            delay={0.5}
-            animateIn="pulse"
-            animateOut="fadeOut"
-          >
-            <div className="libraries__title">
+          <div className="libraries__title">
+            <ScrollAnimation
+              offset={30}
+              duration={0.75}
+              delay={0.5}
+              animateIn="pulse"
+              animateOut="fadeOut"
+            >
               <h3 className="header-3">Libraries and Frameworks</h3>
-            </div>
-          </ScrollAnimation>
+            </ScrollAnimation>
+          </div>
           <div id="skills-list-framworks" className="libraries__details">
             {skillsListFramworks.map(item => {
               let toggle = true;
@@ -170,7 +170,7 @@ class Skills extends Component {
               return (
                 <ScrollAnimation
                   key={itemIndex}
-                  offset={50}
+                  offset={30}
                   duration={0.5}
                   delay={0}
                   animateIn={
@@ -187,17 +187,17 @@ class Skills extends Component {
           </div>
         </div>
         <div className="my-skills__database">
-          <ScrollAnimation
-            offset={50}
-            duration={0.75}
-            delay={0.5}
-            animateIn="pulse"
-            animateOut="fadeOut"
-          >
-            <div className="database__title">
+          <div className="database__title">
+            <ScrollAnimation
+              offset={30}
+              duration={0.75}
+              delay={0.5}
+              animateIn="pulse"
+              animateOut="fadeOut"
+            >
               <h3 className="header-3">Database</h3>
-            </div>
-          </ScrollAnimation>
+            </ScrollAnimation>
+          </div>
           <div className="database__details">
             {skillsListDb.map(item => {
               let toggle = true;
@@ -206,7 +206,7 @@ class Skills extends Component {
               return (
                 <ScrollAnimation
                   key={itemIndex}
-                  offset={50}
+                  offset={30}
                   duration={0.5}
                   delay={0}
                   animateIn={
@@ -223,17 +223,17 @@ class Skills extends Component {
           </div>
         </div>
         <div className="my-skills__design-apps">
-          <ScrollAnimation
-            offset={50}
-            duration={0.75}
-            delay={0.5}
-            animateIn="pulse"
-            animateOut="fadeOut"
-          >
-            <div className="design-apps__title">
+          <div className="design-apps__title">
+            <ScrollAnimation
+              offset={30}
+              duration={0.75}
+              delay={0.5}
+              animateIn="pulse"
+              animateOut="fadeOut"
+            >
               <h3 className="header-3">Design Softwares</h3>
-            </div>
-          </ScrollAnimation>
+            </ScrollAnimation>
+          </div>
           <div className="design-apps__details">
             {skillsListDesignSoftwares.map(item => {
               let toggle = true;
@@ -242,7 +242,7 @@ class Skills extends Component {
               return (
                 <ScrollAnimation
                   key={itemIndex}
-                  offset={50}
+                  offset={30}
                   duration={0.5}
                   delay={0}
                   animateIn={

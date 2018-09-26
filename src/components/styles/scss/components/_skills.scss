@@ -1,8 +1,10 @@
 .my-skills {
   &__title {
-    padding-left: 1rem;
+    line-height: 1.3;
     margin-bottom: 2rem;
-    border-bottom: 2px solid #626262;
+    h2{
+      padding-left: 1rem;
+    }
   }
 
   &__languages {
@@ -10,6 +12,7 @@
 
     .languages {
       &__title {
+        line-height: 1.3;
         margin: 0 auto;
       }
       &__details {
@@ -27,6 +30,8 @@
 
     .libraries {
       &__title {
+        line-height: 1.3;
+
         h3 {
           width: 100%;
           background-color: #ab2b2b;
@@ -56,6 +61,8 @@
 
     .database {
       &__title {
+        line-height: 1.3;
+
         h3 {
           width: 100%;
           background-color: #055399;
@@ -85,6 +92,8 @@
 
     .design-apps {
       &__title {
+        line-height: 1.3;
+
         h3 {
           width: 100%;
           background-color: #990571;

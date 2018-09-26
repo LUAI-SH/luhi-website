@@ -55,8 +55,6 @@ ORDER: Base + typography > general layout + grid > page layout > components
 }
 
 @mixin colored-rectangle($width: 100px, $height: 100px, $bg-color: black) {
-  display: block;
-  position: relative;
   width: $width;
   height: $height;
   background-color: $bg-color;
