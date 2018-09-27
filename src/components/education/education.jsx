@@ -15,7 +15,7 @@ class Education extends Component {
           <div className="education-history__title">
             <h2 className="header-2">
               my
-              <span>Education</span>
+              <span className="color-gold">Education</span>
             </h2>
           </div>
           <div className="u-thin-line" />

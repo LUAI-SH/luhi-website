@@ -1,7 +1,12 @@
 .education-history {
   &__title {
-    color: $color-white;
-    margin-bottom: 0.5rem;
+    margin-bottom: 1rem;
+    line-height: 1.4;
+    background-color: darken($color-blue-dark, 4%);
+    h2 {
+      padding-left: 1rem;
+      color: $color-white;
+    }
   }
   &__details {
     width: 100%;
@@ -10,13 +15,15 @@
     line-height: 1.5;
     display: grid;
     padding: 0 1.5rem 1.5rem 1.5rem;
+    margin-bottom: 1rem;
     grid-template-areas:
       "year-1 description-1"
       "year-2 description-2"
       "year-3 description-3";
     grid-row-gap: 1.5rem;
     grid-column-gap: 4rem;
-
+    // color: rgb(202, 232, 255);
+    color: lighten($color-blue-dark, 70%);
     .details {
       &__year {
         text-align: right;
@@ -44,10 +51,6 @@
       }
     }
   }
-}
-
-#my-education h1 span {
-  color: rgb(246, 211, 113);
 }
 
 .edu-details {
