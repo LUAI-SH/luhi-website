@@ -1,8 +1,8 @@
 .education-history {
   overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  
+  //// WHY???????????
+  // display: flex;
+  // flex-direction: column;
 
   &__title {
     margin-bottom: 1rem;
@@ -58,4 +58,3 @@
     }
   }
 }
-
