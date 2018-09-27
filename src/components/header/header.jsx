@@ -10,7 +10,7 @@ class Header extends Component {
 
   handleScrollToSkills = () => {
     document
-      .getElementById("my-skills")
+      .getElementById("section-skills")
       .scrollIntoView({ block: "start", behavior: "smooth" });
   };
 
