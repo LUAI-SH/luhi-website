@@ -1,5 +1,7 @@
 .my-skills {
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
 
   &__title {
     line-height: 1.3;

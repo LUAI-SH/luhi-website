@@ -19,7 +19,6 @@ class Education extends Component {
             </h2>
           </ScrollAnimation>
         </div>
-        <div className="u-thin-line" />
         <div className="education-history__details">
           <div className="details__year y-1">
             <ScrollAnimation
@@ -41,8 +40,8 @@ class Education extends Component {
               animateOut="fadeOutDown"
             >
               <p>
-                {`Full Stack Developer Track (1 Million Arab Coders Initiative)
-                Udacity.com`}
+                Full Stack Developer Track (1 Million Arab Coders Initiative)
+                Udacity.com
               </p>
             </ScrollAnimation>
           </div>
@@ -65,11 +64,9 @@ class Education extends Component {
               animateIn="fadeInUp"
               animateOut="fadeOutDown"
             >
-              <p>
-                {`Master of Electronic Engineering, Computer Department.\n
-            Universiti Teknikal Malaysia Melaka (UTeM).\n
-            Current GPA 3.81`}
-              </p>
+              <p>Master of Electronic Engineering, Computer Department.</p>
+              <p>Universiti Teknikal Malaysia Melaka (UTeM).</p>
+              <p>Current GPA 3.81</p>
             </ScrollAnimation>
           </div>
           <div className="details__year y-3">
@@ -93,9 +90,9 @@ class Education extends Component {
             >
               <p>
                 {`Bachelor of Electrical Engineering, Computer & Control
-            Department.\n
-            Sana’a University.`}
+                Department.`}
               </p>
+              <p>Sana’a University.</p>
             </ScrollAnimation>
           </div>
         </div>

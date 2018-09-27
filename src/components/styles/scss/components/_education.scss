@@ -1,5 +1,9 @@
 .education-history {
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  
+
   &__title {
     margin-bottom: 1rem;
     line-height: 1.4;
@@ -17,14 +21,15 @@
     display: grid;
     padding: 0 1.5rem 1.5rem 1.5rem;
     margin-bottom: 1rem;
+    color: lighten($color-blue-dark, 70%);
+
     grid-template-areas:
       "year-1 description-1"
       "year-2 description-2"
       "year-3 description-3";
     grid-row-gap: 1.5rem;
     grid-column-gap: 4rem;
-    // color: rgb(202, 232, 255);
-    color: lighten($color-blue-dark, 70%);
+
     .details {
       &__year {
         text-align: right;
@@ -54,9 +59,3 @@
   }
 }
 
-.edu-details {
-  margin: 1rem auto;
-  color: rgb(202, 232, 255);
-  font-size: 0.8rem;
-  text-align: left;
-}
