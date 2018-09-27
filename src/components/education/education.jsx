@@ -5,21 +5,21 @@ class Education extends Component {
   render() {
     return (
       <section id="section-education" className="education-history">
-        <ScrollAnimation
-          offset={30}
-          duration={0.75}
-          delay={0}
-          animateIn="slideInRight"
-          animateOut="slideOutLeft"
-        >
-          <div className="education-history__title">
+        <div className="education-history__title">
+          <ScrollAnimation
+            offset={30}
+            duration={0.75}
+            delay={0}
+            animateIn="slideInRight"
+            animateOut="slideOutLeft"
+          >
             <h2 className="header-2">
               my
               <span className="color-gold">Education</span>
             </h2>
-          </div>
-          <div className="u-thin-line" />
-        </ScrollAnimation>
+          </ScrollAnimation>
+        </div>
+        <div className="u-thin-line" />
         <div className="education-history__details">
           <div className="details__year y-1">
             <ScrollAnimation
