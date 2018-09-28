@@ -10,18 +10,20 @@ import Skills from "./components/skills/skills";
 import Footer from "./components/footer/footer";
 import Education from "./components/education/education";
 import Beta from "./components/common/beta/beta";
-// import EnteryPage from "./components/enteryPage/enteryPage";
+import EnteryPage from "./components/enteryPage/enteryPage";
 
 // For font-awesome
 library.add(fab, faEnvelope);
 
 class App extends Component {
 
-  componentDidMount() {
-
-  }
-
   render() {
+    const { isPageLoading } = this.props;
+
+    if (isPageLoading) {
+      return <EnteryPage />;
+    }
+
     return (
       <div id="app">
         <NavBar />
