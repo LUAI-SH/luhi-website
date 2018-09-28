@@ -41,8 +41,8 @@ class Education extends Component {
             >
               <p>
                 Full Stack Developer Track (1 Million Arab Coders Initiative)
-                Udacity.com
               </p>
+              <p>Udacity.com</p>
             </ScrollAnimation>
           </div>
           <div className="details__year y-2">

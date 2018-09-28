@@ -45,7 +45,7 @@ class Footer extends Component {
             </a>
           </div>
           <div className="mail">
-            <a href={contactMeLinks.email}>
+            <a href={`mailto:${contactMeLinks.email}`}>
               <FontAwesomeIcon
                 className="mail__icon"
                 icon="envelope"

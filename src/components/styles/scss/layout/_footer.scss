@@ -13,7 +13,7 @@
     grid-area: logo;
     margin: 0 auto;
     width: 100%;
-    background-color: tomato;
+    // background-color: tomato;
     svg {
       fill: $color-white;
       width: 20rem;
@@ -55,6 +55,14 @@
         color: #db4437;
       }
     }
+  }
+
+  &__all-rights-res {
+    width: 100%;
+    font-size: 1.5rem;
+    color: $color-white;
+    background-color: darken($color-grey-dark-2, 40%);
+    margin: 1rem auto;
   }
 
   a:link,

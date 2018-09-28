@@ -10,6 +10,7 @@ import Skills from "./components/skills/skills";
 import Footer from "./components/footer/footer";
 import Education from "./components/education/education";
 import Beta from "./components/common/beta/beta";
+import EnteryPage from "./components/enteryPage/enteryPage";
 
 // For font-awesome
 library.add(fab, faEnvelope);
@@ -18,52 +19,33 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      isLoading: false,
-      isGreetingAppeared: false
+      isLoading: true
     };
   }
 
   componentDidMount() {
     let state = this.state;
-
-    setTimeout(() => {
+    window.addEventListener("load", () => {
       state.isLoading = false;
       this.setState(state);
-    }, 3000);
+      console.log("All resources finished loading!");
+    });
 
-    setTimeout(() => {
-      state.isGreetingAppeared = true;
-      this.setState(state);
-    }, 400);
+    // setTimeout(() => {
+    //   state.isLoading = false;
+    //   this.setState(state);
+    // }, 5000);
   }
 
   render() {
     const { isLoading } = this.state;
 
     if (isLoading) {
-      const { isGreetingAppeared } = this.state;
-      return (
-        <div id="loading-page" className="container load-bg text-center">
-          <div className="spinner">
-            <div className="lds-ellipsis">
-              <div />
-              <div />
-              <div />
-              <div />
-            </div>
-          </div>
-          {isGreetingAppeared && (
-            <div className="animated fadeIn slow">
-              <h1>Welcome to my website</h1>
-              <h2>Please Wait...</h2>
-            </div>
-          )}
-        </div>
-      ); // render null when app is not ready
+      return <EnteryPage />;
     }
 
     return (
-      <div className="App">
+      <div id="app">
         <NavBar />
         <Header />
         <Beta />

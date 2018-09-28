@@ -1,0 +1,57 @@
+.loading-container {
+  background-color: $color-grey-dark-3;
+  width: 100%;
+  height: 100vh;
+  display: grid;
+  grid-template-rows: 50% 50%;
+  grid-row-gap: 2rem;
+  grid-template-areas:
+    "spinner-animation"
+    "message";
+
+  &__spinner {
+    grid-area: spinner-animation;
+    align-self: end;
+  }
+  &__lines {
+    display: block;
+    width: 150px;
+    height: 150px;
+    margin: 0 auto;
+    border-radius: 50%;
+    border: 3px solid transparent;
+    border-top-color: #9370db;
+    animation: spinner 2s linear infinite;
+
+    &:before {
+      content: "";
+      position: absolute;
+      top: 5px;
+      left: 5px;
+      right: 5px;
+      bottom: 5px;
+      border-radius: 50%;
+      border: 3px solid transparent;
+      border-top-color: #ba55d3;
+      animation: spinner 3s linear infinite;
+    }
+    &:after {
+      content: "";
+      position: absolute;
+      top: 15px;
+      left: 15px;
+      right: 15px;
+      bottom: 15px;
+      border-radius: 50%;
+      border: 3px solid transparent;
+      border-top-color: #ff00ff;
+      animation: spinner 1.5s linear infinite;
+    }
+  }
+  &__message {
+    align-self: start;
+    grid-area: message;
+    font-size: 2rem;
+    color: $color-white;
+  }
+}
