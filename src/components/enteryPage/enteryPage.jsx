@@ -4,7 +4,7 @@ import LoadingAnimation from "../common/loadingAnimation/loadingAnimation";
 class EnteryPage extends Component {
   render() {
     return (
-      <div className="entery-page">
+      <div id="preloading" className="entery-page">
         <LoadingAnimation />
       </div>
     );
