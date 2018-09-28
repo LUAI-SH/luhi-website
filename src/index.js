@@ -13,12 +13,14 @@ smoothscroll.polyfill();
 ReactDOM.render(<App isPageLoading={true} />, document.getElementById("root"));
 
 window.addEventListener("load", event => {
-//   alert("press");
+  //   alert("press");
   console.log("All resources finished loading!");
-  ReactDOM.render(
-    <App isPageLoading={false} />,
-    document.getElementById("root")
-  );
+  setTimeout(() => {
+    ReactDOM.render(
+      <App isPageLoading={false} />,
+      document.getElementById("root")
+    );
+  }, 2000);
 });
 
 registerServiceWorker();
