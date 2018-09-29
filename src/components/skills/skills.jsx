@@ -126,27 +126,27 @@ class Skills extends Component {
               title={"HTML5 & CSS3"}
               animateInType="fadeIn"
               animateOutType="fadeOut"
-              percentage="98"
+              percentage="99"
             />
             <ProgressBarOnScroll
               title="Javascript (ES6)"
               animateInType="fadeIn"
               animateOutType="fadeOut"
-              percentage="97"
+              percentage="98"
             />
 
             <ProgressBarOnScroll
               title="Python"
               animateInType="fadeIn"
               animateOutType="fadeOut"
-              percentage="92"
+              percentage="96"
             />
 
             <ProgressBarOnScroll
               title="CSharp"
               animateInType="fadeIn"
               animateOutType="fadeOut"
-              percentage="89"
+              percentage="92"
             />
           </div>
         </div>
