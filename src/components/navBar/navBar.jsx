@@ -26,8 +26,8 @@ class NavBar extends Component {
 
   handleScrollToContactMe = () => {
     document
-      .getElementById("contact-me")
-      .scrollIntoView({ block: "end", behavior: "smooth" });
+      .getElementById("footer")
+      .scrollIntoView( { block: "end", inline: "end" ,behavior: "smooth" });
   };
 
   render() {

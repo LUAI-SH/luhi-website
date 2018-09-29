@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import ScrollAnimation from "react-animate-on-scroll";
+// import ScrollAnimation from "react-animate-on-scroll";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import logo from "../../images/logo.svg";
@@ -14,16 +14,9 @@ class Footer extends Component {
     return (
       <footer id="footer" className="footer">
         <div className="footer__logo">
-          <ScrollAnimation
-            offset={50}
-            duration={1}
-            delay={0.75}
-            animateIn="tada"
-          >
             <svg>
               <use xlinkHref={`${logo}#lu-logo`} />
             </svg>
-          </ScrollAnimation>
         </div>
         <div className="footer__contact-me">
           <div className="twitter">

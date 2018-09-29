@@ -164,21 +164,15 @@ class Skills extends Component {
           </div>
           <div id="skills-list-framworks" className="libraries__details">
             {skillsListFramworks.map(item => {
-              let toggle = true;
               const itemIndex = skillsListFramworks.indexOf(item);
-              if (itemIndex % 2 === 0) toggle = false;
               return (
                 <ScrollAnimation
                   key={itemIndex}
                   offset={30}
                   duration={0.5}
                   delay={0}
-                  animateIn={
-                    toggle ? "lu-slide-to-left-in" : "lu-slide-to-right-in"
-                  }
-                  animateOut={
-                    toggle ? "lu-slide-to-left-out" : "lu-slide-to-right-out"
-                  }
+                  animateIn="fadeIn"
+                  animateOut="fadeOut"
                 >
                   {item}
                 </ScrollAnimation>
@@ -200,21 +194,15 @@ class Skills extends Component {
           </div>
           <div className="database__details">
             {skillsListDb.map(item => {
-              let toggle = true;
               const itemIndex = skillsListDb.indexOf(item);
-              if (itemIndex % 2 === 0) toggle = false;
               return (
                 <ScrollAnimation
                   key={itemIndex}
                   offset={30}
                   duration={0.5}
                   delay={0}
-                  animateIn={
-                    toggle ? "lu-slide-to-left-in" : "lu-slide-to-right-in"
-                  }
-                  animateOut={
-                    toggle ? "lu-slide-to-left-out" : "lu-slide-to-right-out"
-                  }
+                  animateIn="fadeIn"
+                  animateOut="fadeOut"
                 >
                   {item}
                 </ScrollAnimation>
@@ -236,21 +224,15 @@ class Skills extends Component {
           </div>
           <div className="design-apps__details">
             {skillsListDesignSoftwares.map(item => {
-              let toggle = true;
               const itemIndex = skillsListDesignSoftwares.indexOf(item);
-              if (itemIndex % 2 === 0) toggle = false;
               return (
                 <ScrollAnimation
                   key={itemIndex}
                   offset={30}
                   duration={0.5}
                   delay={0}
-                  animateIn={
-                    toggle ? "lu-slide-to-left-in" : "lu-slide-to-right-in"
-                  }
-                  animateOut={
-                    toggle ? "lu-slide-to-left-out" : "lu-slide-to-right-out"
-                  }
+                  animateIn="fadeIn"
+                  animateOut="fadeOut"
                 >
                   {item}
                 </ScrollAnimation>

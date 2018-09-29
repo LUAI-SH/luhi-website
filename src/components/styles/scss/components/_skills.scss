@@ -6,7 +6,7 @@
   &__title {
     line-height: 1.3;
     margin-bottom: 2rem;
-    h2{
+    h2 {
       padding-left: 1rem;
     }
   }
@@ -43,7 +43,7 @@
       }
       &__details {
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
 
         .grid-item {
           padding: 2rem;
@@ -74,7 +74,7 @@
       }
       &__details {
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
 
         .grid-item {
           padding: 2rem;
@@ -105,7 +105,7 @@
       }
       &__details {
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
 
         .grid-item {
           padding: 2rem;
@@ -120,57 +120,5 @@
         }
       }
     }
-  }
-}
-
-.lu-slide-to-right-in {
-  animation-name: lu-slide-to-right-in;
-}
-
-@keyframes lu-slide-to-right-in {
-  0% {
-    transform: translateX(-20rem);
-  }
-  100% {
-    transform: translateX(0rem);
-  }
-}
-
-.lu-slide-to-left-in {
-  animation-name: lu-slide-to-left-in;
-}
-
-@keyframes lu-slide-to-left-in {
-  0% {
-    transform: translateX(20rem);
-  }
-  100% {
-    transform: translateX(0rem);
-  }
-}
-
-.lu-slide-to-right-out {
-  animation-name: lu-slide-to-right-out;
-}
-
-@keyframes lu-slide-to-right-out {
-  0% {
-    transform: translateX(0rem);
-  }
-  100% {
-    transform: translateX(-20rem);
-  }
-}
-
-.lu-slide-to-left-out {
-  animation-name: lu-slide-to-left-out;
-}
-
-@keyframes lu-slide-to-left-out {
-  0% {
-    transform: translateX(0rem);
-  }
-  100% {
-    transform: translateX(20rem);
   }
 }
