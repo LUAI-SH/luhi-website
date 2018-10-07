@@ -45,6 +45,8 @@
   &__item:link,
   &__item:visited {
     display: inline-block;
+    text-decoration: none;
+    color: inherit;
     background-image: linear-gradient(
       120deg,
       transparent,
@@ -52,9 +54,10 @@
       #87b3cd 0
     );
     background-size: 265%;
-    // transition: all 0.4s;
+    transition: all 0.4s;
   }
-  &__item:hover {
+  &__item:hover,
+  &__item:active {
     cursor: pointer;
     background-position: 163%;
     color: $color-white;

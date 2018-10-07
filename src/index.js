@@ -14,6 +14,7 @@ ReactDOM.render(<App isPageLoading={true} />, document.getElementById("root"));
 
 window.addEventListener("load", event => {
   //   alert("press");
+  console.log(event);
   console.log("All resources finished loading!");
   setTimeout(() => {
     ReactDOM.render(

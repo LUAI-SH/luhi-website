@@ -27,7 +27,7 @@ class NavBar extends Component {
   handleScrollToContactMe = () => {
     document
       .getElementById("footer")
-      .scrollIntoView( { block: "end", inline: "end" ,behavior: "smooth" });
+      .scrollIntoView({ block: "end", inline: "end", behavior: "smooth" });
   };
 
   render() {
@@ -43,7 +43,13 @@ class NavBar extends Component {
         )}
         {isNavItemsAnimationStarted && (
           <div className="lu-navbar__items">
-            <a className="lu-navbar__item">CV</a>
+            <a
+              className="lu-navbar__item"
+              href="https://drive.google.com/file/d/1O7SMQVqEtEF5ZAptg_4Q2W2_k7C4RWvm/view"
+              target="_blank"
+            >
+              CV
+            </a>
             <a
               className="lu-navbar__item"
               onClick={this.handleScrollToContactMe}
