@@ -45,13 +45,6 @@ class NavBar extends Component {
           <div className="lu-navbar__items">
             <a
               className="lu-navbar__item"
-              href="https://drive.google.com/file/d/1aX1pvWhACM0xdYSgpZ4iAESExGjKGe37/view?usp=sharing"
-              target="_blank"
-            >
-              CV
-            </a>
-            <a
-              className="lu-navbar__item"
               onClick={this.handleScrollToContactMe}
             >
               Contact Me

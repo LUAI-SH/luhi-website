@@ -55,7 +55,7 @@ class Header extends Component {
               </span>
             </p>
             <p>
-              <span className="color-code-green u-padding-left-md">My name is Luai. I’m a</span>
+              <span className="color-code-green u-padding-left-md">My name is Leo. I’m a</span>
             </p>
             <p>
               <span className="color-code-green u-padding-left-md">Computer Engineer and a</span>
